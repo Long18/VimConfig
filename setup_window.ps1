@@ -81,8 +81,8 @@ if (-not (Test-Path $ClinkPath)) {
 if(-not (Test-Path $PowershellPath)) {
     New-Item -Path $PowershellPath -ItemType Directory -Force
 }
-Copy-Item -Path ".\oh-my-posh\oh-my-posh.lua" -Destination $ClinkPath -Force
-Copy-Item -Path ".\oh-my-posh\Microsoft.PowerShell_profile.ps1" -Destination $PowershellPath -Force
+Copy-Item -Path ".\terminal\oh-my-posh.lua" -Destination $ClinkPath -Force
+Copy-Item -Path ".\terminal\Microsoft.PowerShell_profile.ps1" -Destination $PowershellPath -Force
 Write-Done
 
 # Configure Vscode
