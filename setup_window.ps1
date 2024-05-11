@@ -1,3 +1,12 @@
+
+#   _       __ _  __ __ _                 
+#  | |     / /(_)/ // /(_)____ _ ____ ___ 
+#  | | /| / // // // // // __ `// __ `__ \
+#  | |/ |/ // // // // // /_/ // / / / / /
+#  |__/|__//_//_//_//_/ \__,_//_/ /_/ /_/ 
+#                                         
+# https://github.com/Long18
+
 # Run this command if no execution policy error:
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
