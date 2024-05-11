@@ -1,0 +1,1 @@
+load(io.popen('oh-my-posh init cmd --config C:\\Users\\William\\AppData\\Local\\Programs\\oh-my-posh\\themes\\atomic.omp.json'):read("*a"))()
