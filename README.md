@@ -2,14 +2,15 @@
 
 ## Note
 
-This Vim configuration is compatible with both Windows and Linux environments. After cloning this repository, execute the command `:PlugInstall` to install [the necessary plugins](https://github.com/junegunn/vim-plug).
+This Vim configuration is compatible with both Windows and Linux environments. After cloning this repository, execute the command `:PlugInstall` to install the necessary plugins.
 
 ## Requirements
 
 To effectively utilize this Vim configuration, ensure the following dependencies are installed:
 
-- vim-plug
-- Git
+- [Theme](https://vimcolorschemes.com/navarasu/onedark.nvim)
+- [Vim-plug](https://github.com/junegunn/vim-plug)
+- [Git](https://github.com/Xuyuanp/nerdtree-git-plugin)
 - bat
 - NodeJS
 - Python
