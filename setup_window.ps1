@@ -74,7 +74,7 @@ $DestinationPath = "$env:USERPROFILE\AppData\Local\nvim"
 if (-not (Test-Path $DestinationPath)) {
     New-Item -Path $DestinationPath -ItemType Directory -Force
 }
-Copy-Item -Path ".\neovim\*" -Destination $DestinationPath -Force
+Copy-Item -Path ".\neovim\*" -Destination $DestinationPath -Force -Recurse
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim | `
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 nvim -E -s -u "$($env:USERPROFILE)\AppData\Local\nvim\init.vim" +PlugInstall +PlugUpdate +q
