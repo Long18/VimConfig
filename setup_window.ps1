@@ -11,17 +11,12 @@ function Write-Done {
     Write-Host ("Done!") -ForegroundColor Blue; Write-Host
 }
 
-function Write-Warning {
-    param($msg)
-    Write-Host ("Warning: " + $msg) -ForegroundColor Yellow; Write-Host
-}
-
 # Start
 Start-Process -Wait powershell -Verb runas -ArgumentList "Set-ItemPropety -Path REGISTRY::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System -Name ConsentPromptBehaviorAdmin -Value 0"
 
 Write-Start -msg "Installing Scoop..."
 if (Get-Command scoop -ErrorAction SilentlyContinue) {
-    Write-Warning -msg "Scoop is already installed."
+    Write-Warning "Scoop is already installed."
 }
 else {
     Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run remote script the first time
@@ -71,3 +66,22 @@ Write-Done
 ## In my case, I have settings synced with GitHub so I don't need to do anything
 # code --install-extension vscodevim.vim
 # Write-Done
+
+# Configure Virtualization
+Start-Process -Wait powershell -Verb runas -ArgumentList @"
+    echo y | Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -All -Norestart
+    echo y | Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -All
+"@
+Write-Done
+
+# Install WSL
+Write-Start -msg "Installing WSL..."
+If(!(wsl -l -v)){
+    wsl --install
+    wsl --update
+    wsl --install --no-launch --web-download -d Ubuntu
+}
+else {
+    Write-Warning "WSL is already installed."
+}
+Write-Done
