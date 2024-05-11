@@ -37,13 +37,20 @@ Write-Done
 Write-Start -msg "Installing utils packages..."
 # Browser
 scoop install extras/googlechrome
+scoop install extras/brave
 scoop install extras/vscode
+scoop install extras/spotify
     
 # Tool
 scoop install main/vim
 scoop install main/clink
 scoop install main/neovim
 scoop install main/oh-my-posh
+
+scoop install extras/fork
+scoop install extras/sharex
+scoop install extras/powertoys
+scoop install extras/flow-launcher
 
 # Font
 scoop install nerrd-fonts/JetBrainsMono-NF 
