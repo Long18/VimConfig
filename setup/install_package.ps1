@@ -47,6 +47,7 @@ scoop install extras/fork
 scoop install extras/sharex
 scoop install extras/powertoys
 scoop install extras/flow-launcher
+scoop install extras/windowsdesktop-runtime
 
 # Font
 scoop install nerrd-fonts/JetBrainsMono-NF 
