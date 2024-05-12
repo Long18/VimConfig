@@ -52,6 +52,7 @@ scoop install extras/spotify
     
 # Tool
 scoop install main/vim
+scoop install main/fzf
 scoop install main/clink
 scoop install main/neovim
 scoop install main/oh-my-posh
