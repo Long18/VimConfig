@@ -104,6 +104,14 @@ Write-Done
 # code --install-extension vscodevim.vim
 # Write-Done
 
+# Configure .config
+$ConfigPath = "$env:USERPROFILE\.config"
+if (-not (Test-Path $ConfigPath)) {
+    New-Item -Path $ConfigPath -ItemType Directory -Force
+}
+Copy-Item -Path ".\config\*" -Destination $ConfigPath -Force -Recurse
+Write-Done
+
 # Configure Virtualization
 Start-Process -Wait powershell -Verb runas -ArgumentList @"
     echo y | Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -All -Norestart
