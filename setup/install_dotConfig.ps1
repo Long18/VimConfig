@@ -8,6 +8,8 @@ function Write-Done {
     Write-Host ("Done!") -ForegroundColor Blue; Write-Host
 }
 
+# Configure dotfiles
+Write-Start -msg "Installing winfetch..."
 $ConfigPath = "$env:USERPROFILE\.config"
 if (-not (Test-Path $ConfigPath)) {
     New-Item -Path $ConfigPath -ItemType Directory -Force

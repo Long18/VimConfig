@@ -8,6 +8,8 @@ function Write-Done {
     Write-Host ("Done!") -ForegroundColor Blue; Write-Host
 }
 
+# Configure Virtualization
+Write-Start -msg "Installing Virtualization..."
 Start-Process -Wait powershell -Verb runas -ArgumentList @"
     echo y | Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -All -Norestart
     echo y | Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -All

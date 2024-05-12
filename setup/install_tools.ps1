@@ -8,6 +8,8 @@ function Write-Done {
     Write-Host ("Done!") -ForegroundColor Blue; Write-Host
 }
 
+# Configure neovim
+Write-Start -msg "Installing neovim..."
 $DestinationPath = "$env:USERPROFILE\AppData\Local\nvim"
 if (-not (Test-Path $DestinationPath)) {
     New-Item -Path $DestinationPath -ItemType Directory -Force
