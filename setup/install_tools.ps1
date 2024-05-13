@@ -22,7 +22,7 @@ Write-Done
 
 # Configure Oh-my-posh
 Write-Start -msg "Configuring oh-my-posh..."
-$ClinkPath = "$env:ProgramFiles (x86)\clink"
+$ClinkPath = "$env:CLINK_DIR"
 $PowershellPath = "$env:USERPROFILE\Documents\PowerShell"
 if (-not (Test-Path $ClinkPath)) {
     New-Item -Path $ClinkPath -ItemType Directory -Force
