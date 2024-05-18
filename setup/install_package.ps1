@@ -55,4 +55,9 @@ scoop install nerrd-fonts/JetBrains-Mono
 
 # All-in-one repackage for lastes Microsoft Visual C++ Redistributable Runtime
 scoop install extras/vcredist-aio
+
+# Auto suggestion in Powershell
+Install-Module PSReadLine
+Install-Module -Name PSReadLine -AllowPrerelease -Force -SkipPublisherCheck
+
 Write-Done
