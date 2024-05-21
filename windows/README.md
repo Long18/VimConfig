@@ -29,7 +29,6 @@ This script automates the setup process for configuring a Windows environment wi
 - [Scoop](https://scoop.sh/#/apps)
 - [npm](https://www.npmjs.com/package/package)
 - [pip](https://pypi.org/)
-- [pacman](https://archlinux.org/packages/)
 
 ### Personal Settings
 
