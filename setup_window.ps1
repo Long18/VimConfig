@@ -41,3 +41,6 @@ Start-Process -Wait powershell -Verb runas -ArgumentList @"
 
 # Install WSL
 . "$PSScriptRoot\setup\install_wsl.ps1"
+
+# Setup Wallpapers
+. "$PSScriptRoot\setup\setup_wallpapers.ps1"
