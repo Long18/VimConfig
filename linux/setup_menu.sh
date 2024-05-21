@@ -15,11 +15,13 @@ echo ""
 case "$choice" in
 a | A)
     echo "Installing Everything..."
-    # init everything we have here
+    ./linux/install_packages.sh
+    # ./linux/install_tools.sh
+    # ./linux/install_dot_files.sh
     ;;
 1)
     echo "Installing Packages..."
-    # ./linux/install_packages.sh
+    ./linux/install_packages.sh
     ;;
 2)
     echo "Installing Tools..."
