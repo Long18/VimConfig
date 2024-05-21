@@ -20,27 +20,12 @@ function Write-Done {
     Write-Host ("Done!") -ForegroundColor Blue; Write-Host
 }
 
-# Start
+# Main Script
 Start-Process -Wait powershell -Verb runas -ArgumentList @"
-    Set-ItemPropety -Path 
+    Set-ItemProperty -Path 
     REGISTRY::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System 
     -Name ConsentPromptBehaviorAdmin -Value 0
 "@
 
-# Install Packages
-. "$PSScriptRoot\setup\install_package.ps1"
-
-# Install Tool
-. "$PSScriptRoot\setup\install_tools.ps1"
-
-# Install Dot Config
-. "$PSScriptRoot\setup\install_dotConfig.ps1"
-
-# Install Virtualization
-. "$PSScriptRoot\setup\install_virtualization.ps1"
-
-# Install WSL
-. "$PSScriptRoot\setup\install_wsl.ps1"
-
-# Setup Wallpapers
-. "$PSScriptRoot\setup\setup_wallpapers.ps1"
+# Open menu
+. "$PSScriptRoot\setup\setup_menu.ps1"
