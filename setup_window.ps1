@@ -8,7 +8,22 @@
 # https://github.com/Long18
 
 # Run this command if no execution policy error:
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+# Check and set execution policy if necessary
+$executionPolicy = Get-ExecutionPolicy
+if ($executionPolicy -ne 'RemoteSigned' -and $executionPolicy -ne 'Unrestricted' -and $executionPolicy -ne 'Bypass') {
+    try {
+        Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+        $executionPolicy = Get-ExecutionPolicy
+        if ($executionPolicy -ne 'RemoteSigned' -and $executionPolicy -ne 'Unrestricted' -and $executionPolicy -ne 'Bypass') {
+            Write-Host "Execution policy could not be set. Please manually set it to 'RemoteSigned', 'Unrestricted', or 'Bypass' and run the script again." -ForegroundColor Red
+            exit
+        }
+    }
+    catch {
+        Write-Host "Failed to set execution policy. Please run PowerShell as an administrator and set the execution policy to 'RemoteSigned', 'Unrestricted', or 'Bypass'." -ForegroundColor Red
+        exit
+    }
+}
 
 # Util function for output
 function Write-Start {
