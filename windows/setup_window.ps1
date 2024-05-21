@@ -43,4 +43,4 @@ Start-Process -Wait powershell -Verb runas -ArgumentList @"
 "@
 
 # Open menu
-. "$PSScriptRoot\setup\setup_menu.ps1"
+. "$PSScriptRoot\setup_menu.ps1"

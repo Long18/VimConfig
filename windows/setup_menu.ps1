@@ -20,42 +20,42 @@ function Update-Menu {
     switch ($choice) {
         '1' {
             Write-Start "Installing Packages..."
-            . "$PSScriptRoot\setup\install_package.ps1"
+            . "$PSScriptRoot\install_package.ps1"
             Write-Done
         }
         '2' {
             Write-Start "Installing Tools..."
-            . "$PSScriptRoot\setup\install_tools.ps1"
+            . "$PSScriptRoot\install_tools.ps1"
             Write-Done
         }
         '3' {
             Write-Start "Installing Dot Config..."
-            . "$PSScriptRoot\setup\install_dotConfig.ps1"
+            . "$PSScriptRoot\install_dotConfig.ps1"
             Write-Done
         }
         '4' {
             Write-Start "Installing Virtualization..."
-            . "$PSScriptRoot\setup\install_virtualization.ps1"
+            . "$PSScriptRoot\install_virtualization.ps1"
             Write-Done
         }
         '5' {
             Write-Start "Installing WSL..."
-            . "$PSScriptRoot\setup\install_wsl.ps1"
+            . "$PSScriptRoot\install_wsl.ps1"
             Write-Done
         }
         '6' {
             Write-Start "Setting Up Wallpapers..."
-            . "$PSScriptRoot\setup\setup_wallpapers.ps1"
+            . "$PSScriptRoot\setup_wallpapers.ps1"
             Write-Done
         }
         'a' {
             Write-Start "Installing Everything..."
-            . "$PSScriptRoot\setup\install_package.ps1"
-            . "$PSScriptRoot\setup\install_tools.ps1"
-            . "$PSScriptRoot\setup\install_dotConfig.ps1"
-            . "$PSScriptRoot\setup\install_virtualization.ps1"
-            . "$PSScriptRoot\setup\install_wsl.ps1"
-            . "$PSScriptRoot\setup\setup_wallpapers.ps1"
+            . "$PSScriptRoot\install_package.ps1"
+            . "$PSScriptRoot\install_tools.ps1"
+            . "$PSScriptRoot\install_dotConfig.ps1"
+            . "$PSScriptRoot\install_virtualization.ps1"
+            . "$PSScriptRoot\install_wsl.ps1"
+            . "$PSScriptRoot\setup_wallpapers.ps1"
             Write-Done
         }
         'q' {
