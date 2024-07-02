@@ -14,7 +14,7 @@ $ConfigPath = "$env:USERPROFILE\.config"
 if (-not (Test-Path $ConfigPath)) {
     New-Item -Path $ConfigPath -ItemType Directory -Force
 }
-Copy-Item -Path ".\.config\winfetch\*" -Destination $ConfigPath -Force -Recurse
+Copy-Item -Path "..\.config\*" -Destination $ConfigPath -Force -Recurse
 Write-Done
 
 # Configure vim for vscode
@@ -23,5 +23,5 @@ $DestinationPath = "$env:USERPROFILE\.vimrc"
 if (-not (Test-Path $DestinationPath)) {
     New-Item -Path $DestinationPath -ItemType Directory -Force
 }
-Copy-Item -Path ".\.config\vim\.vimrc" -Destination $DestinationPath -Force
+Copy-Item -Path "..\.config\vim\.vimrc" -Destination $DestinationPath -Force
 Write-Done
