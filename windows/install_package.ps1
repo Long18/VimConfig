@@ -50,8 +50,8 @@ scoop install extras/flow-launcher
 scoop install extras/windowsdesktop-runtime
 
 # Font
-scoop install nerrd-fonts/JetBrainsMono-NF 
-scoop install nerrd-fonts/JetBrains-Mono 
+scoop install nerd-fonts/JetBrainsMono-NF 
+scoop install nerd-fonts/JetBrains-Mono 
 
 # All-in-one repackage for lastes Microsoft Visual C++ Redistributable Runtime
 scoop install extras/vcredist-aio
