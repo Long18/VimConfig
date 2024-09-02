@@ -8,12 +8,19 @@ This script automates the setup process for configuring a Windows environment wi
 
 - [Personal Configuration](#personal-configuration)
   - [Overview](#overview)
+  - [Install](#install)
   - [Pros](#pros)
   - [Usage](#usage)
     - [Package Managers](#package-managers)
     - [Personal Settings](#personal-settings)
   - [Commands](#commands)
   - [Note](#note)
+
+## Install
+
+```bash
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
 ## Pros
 
