@@ -23,5 +23,5 @@ $DestinationPath = "$env:USERPROFILE\.vimrc"
 if (-not (Test-Path $DestinationPath)) {
     New-Item -Path $DestinationPath -ItemType Directory -Force
 }
-Copy-Item -Path "..\.config\vim\.vimrc" -Destination $DestinationPath -Force
+Copy-Item -Path "..\.config\vim\" -Destination $DestinationPath -Force
 Write-Done
