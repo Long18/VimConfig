@@ -24,7 +24,6 @@ Write-Start -msg "Installing Scoop packages..."
 scoop install git
 scoop bucket add main
 scoop bucket add extras
-scoop bucket add nerd-fonts
 scoop update
 Write-Done
 
@@ -33,8 +32,6 @@ Write-Start -msg "Installing utils packages..."
 # Browser
 scoop install extras/googlechrome
 scoop install extras/brave
-scoop install extras/vscode
-scoop install extras/spotify
     
 # Tool
 scoop install main/vim
